@@ -18,22 +18,22 @@ function setup() {
 
 	//Create the Bodies Here.
 	bob1 = new Bob(240,350,20);
-	bob2 = new Bob(280,350,20);
-	bob3 = new Bob(320,350,20);
-	bob4 = new Bob(360,350,20);
-	bob5 = new Bob(400,350,20);
-	bob6 = new Bob(440,350,20);
+	bob2 = new Bob(290,350,20);
+	bob3 = new Bob(340,350,20);
+	bob4 = new Bob(390,350,20);
+	bob5 = new Bob(440,350,20);
+
 
 	base = new Base(350,100,300,20);
 
 	
 
-	rope1 = new Rope(bob1.body,base.body,-5*bob1.radius,0);
-	rope2 = new Rope(bob2.body,base.body,-3*bob2.radius,0);
-	rope3 = new Rope(bob3.body,base.body,-1*bob3.radius,0);
-	rope4= new Rope(bob4.body,base.body,bob4.radius,0);
-	rope5 = new Rope(bob5.body,base.body,3*bob5.radius,0);
-	rope6 = new Rope(bob6.body,base.body,5*bob6.radius,0);
+	rope1 = new Rope(bob1.body,base.body,-4*bob1.radius,0);
+	rope2 = new Rope(bob2.body,base.body,-2.2*bob2.radius,0);
+	rope3 = new Rope(bob3.body,base.body,0,0);
+	rope4= new Rope(bob4.body,base.body,2*bob4.radius,0);
+	rope5 = new Rope(bob5.body,base.body,4*bob5.radius,0);
+	
 	
 	
 
@@ -57,7 +57,7 @@ function draw() {
   bob3.display();
   bob4.display();
   bob5.display();
-  bob6.display();
+  
   
   base.display();
 
@@ -66,7 +66,6 @@ function draw() {
   rope3.display();
   rope4.display();
   rope5.display();
-  rope6.display();
   
   
   drawSprites();
@@ -74,7 +73,7 @@ function draw() {
 }
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(bob6.body,bob6.body.position,{x:-105,y:-85});
+		Matter.Body.applyForce(bob5.body,bob5.body.position,{x:-105,y:-85});
 
 	}
 }
